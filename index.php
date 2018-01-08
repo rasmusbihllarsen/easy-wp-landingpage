@@ -66,6 +66,6 @@
 		?>
 		</ul>
 		
-		<div class="intro-text"><?php _e('Please select your country', 'onlineafdelingen'); ?></div>
+		<div class="intro-text"><?php _e('Please select your country', 'rasmusbihllarsen'); ?></div>
 	</body>
 </html>
