@@ -1,0 +1,275 @@
+/*
+ * Theme Name:   Layback Landingpage
+ * Theme URI:    https://laybackcph.dk
+ * Description:  This theme shows all the languages possibly on this platform
+ * Author:       Layback
+ * Author URI:   https://laybackcph.dk
+ * Version:      1.0.0
+ * Text Domain:  onlineafdelingen
+ */
+
+body {
+    background-size: cover;
+    background-position: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    width:100vw;
+    margin:0;
+    padding:0;
+    border:0;
+}
+
+body:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(255,255,255,0.6);
+    z-index: -1;
+}
+
+.logo {
+    margin-bottom:125px;
+}
+
+.intro-text {
+    margin: 45px 0 85px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size:1.5em;
+    color:#000000;
+    text-align:center;
+}
+
+ul {
+    padding:0;
+    margin: 0;
+    list-style:none;
+}
+
+ul li {
+    display:block;
+    float:left;
+    margin:0 45px;
+}
+
+ul li a {
+    display:block;
+    width:17vw;
+    height:12vw;
+    overflow:hidden;
+    opacity:.75;
+    transition:.3s ease;
+}
+
+ul li a:hover {
+    box-shadow:0 0 25px #333;
+    opacity:1;
+}
+
+.span4,
+.span3,
+.span2,
+.span1 {
+	display:none;
+}
+
+.flag {
+    background-color: #bf0d2a;
+    position:relative;
+}
+
+.se-flag {
+    background-color: #005f9d;
+}
+
+.de-flag {
+    background-color: #d80003;
+}
+
+.gb-flag {
+    background-color: #001F5E;
+}
+
+.gb-flag .span1,
+.gb-flag .span2,
+.gb-flag .span3,
+.gb-flag .span4 {
+	display:block;
+}
+
+.gb-flag .span1:before,
+.gb-flag .span1:after,
+.gb-flag .span2:before,
+.gb-flag .span2:after,
+.gb-flag .span3:before,
+.gb-flag .span3:after,
+.gb-flag .span4:before,
+.gb-flag .span4:after,
+.gb-flag:before,
+.gb-flag:after {
+	content:"";
+	background-color:#ffffff;
+	display: block;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	width:100%;
+	height:22%;
+	z-index:2;
+}
+
+.gb-flag .span2:before,
+.gb-flag .span2:after {
+	transform:translate(-50%,-50%) rotate(35deg);
+	width:135%;
+	z-index:0;
+}
+
+.gb-flag .span2:after {
+	transform:translate(-50%,-50%) rotate(-35deg);
+}
+
+.gb-flag .span3:before,
+.gb-flag .span3:after,
+.gb-flag .span4:before,
+.gb-flag .span4:after {
+	transform:translate(-50%,-50%) rotate(35deg);
+	background-color: #C11129;
+	height:8%;
+	width:135%;
+	z-index:1;
+	left:0;
+	top:0;
+}
+
+.gb-flag .span3:before,
+.gb-flag .span4:before {
+	transform:translate(-51%,-50%) rotate(35deg);
+}
+
+.gb-flag .span3:after {
+	transform:translate(-51%,-50%) rotate(-35deg);
+	left:100%;
+}
+.gb-flag .span4:before {
+	transform:translate(-49%,-50%) rotate(35deg);
+	left:100%;
+	top:100%;
+}
+.gb-flag .span4:after {
+	transform:translate(-49%,-50%) rotate(-35deg);
+	top:100%;
+}
+
+.gb-flag .span1:before,
+.gb-flag .span1:after {
+	height:12.5%;
+	background-color: #C11129;
+	z-index:3;
+}
+
+.gb-flag .span1:after,
+.gb-flag:after {
+	transform: translate(-50%,-50%) rotate(90deg)
+}
+
+.se-flag:before,
+.se-flag:after,
+.dk-flag:before,
+.dk-flag:after {
+    content:"";
+    background-color: #ffffff;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+.se-flag:before,
+.se-flag:after{
+    background-color: #fec506;
+}
+
+.se-flag:after,
+.dk-flag:after,
+.se-flag:before,
+.dk-flag:before {
+    width:110%;
+    height:12.5%;
+}
+
+.se-flag:after,
+.dk-flag:after {
+    left:33%;
+    transform:translate(-50%,-50%) rotate(90deg);
+}
+
+.de-flag:before,
+.de-flag:after {
+    content:"";
+    width:100%;
+    height:33%;
+    position:absolute;
+    left:0;
+}
+
+.de-flag:before {
+    top:0;
+    background-color: #000000;
+}
+
+.de-flag:after {
+    bottom:0;
+    background-color: #ffc706;
+}
+
+@media(max-width: 1024px){
+    ul li {
+        margin: 0 15px;
+    }
+    
+    ul li a {
+        opacity:1;
+    }
+}
+
+@media(max-width: 900px){
+    ul li a {
+        width: 27vw;
+        height: 17vw;
+    }
+}
+
+@media(max-width: 600px){
+    body {
+        font-size: 12px;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    ul li {
+        margin:15px auto;
+        display:block;
+        clear:both;
+    }
+
+    ul li a {
+        width: 100vw;
+        max-width:200px;
+        height: 15vh;
+        clear: both;
+    }
+
+    .intro-text {
+        margin: 25px 0 0;
+    }
+}
